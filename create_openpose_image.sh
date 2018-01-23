@@ -41,3 +41,8 @@ make && make install
 ln -s /usr/local/lib/PyOpenPose.so /usr/lib/python2.7/
 
 ldconfig
+
+# Cleanup. Important : lsb-release has python3.5 as a requirement, but it is needed to build openpose
+# TODO: Remove these requirements from the build process, if possible
+apt -y purge lsb-release cmake unzip wget
+apt -y autoremove

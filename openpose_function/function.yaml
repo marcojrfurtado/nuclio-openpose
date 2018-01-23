@@ -1,0 +1,18 @@
+apiVersion: "nuclio.io/v1"
+kind: Function
+metadata: 
+        name: openpose
+spec:
+        runtime: python:2.7
+        handler: openpose:handler
+        image: openpose
+        env:
+        - name: OPENPOSE_ROOT
+          value: /root/openpose
+        build:
+                baseImageName: cuda
+                commands:
+                - "apt update"
+                - "apt -y install wget"
+                - "wget https://raw.githubusercontent.com/marcojrfurtado/nuclio-openpose/master/create_openpose_image.sh -O /root/create_openpose_image.sh"
+                - "bash /root/create_openpose_image.sh"
