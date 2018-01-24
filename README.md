@@ -124,3 +124,14 @@ python visualize_results.py https://resources.stuff.co.nz/content/dam/images/1/n
 
 Note: The visualization tool presented here is only a simple and rudimentary example on how to use and validate the JSON results. A much beter visualization is presented in the original [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) project.
 
+#### Samples
+
+After running the visualization program, output images will be written to **./results.png**. Here are a few samples.
+
+![](./image_samples/sample1.jpg)
+
+![](./image_samples/sample1_out.png)
+
+![](./image_samples/sample2.jpg)
+
+![](./image_samples/sample2_out.png)
